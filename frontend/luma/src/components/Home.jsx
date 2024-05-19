@@ -5,21 +5,14 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <div className="">
-        <h1 className="text-3xl text-white font-bold text-center p-5">
-          Welcome to{" "}
-          <span className="bg-gradient-to-r from-red-400 to-red-600 rounded-md p-2">
-            DHENT
-          </span>
-        </h1>
-      </div>
-      <div className="flex justify-center items-center min-h-80 min-w-80 ">
-        <div className=" md:m-28">
-          <h1 className="text-3xl text-white font-bold m-1 md:m-2">
+
+      <div className="flex justify-center font-serif items-center min-h-80 min-w-80 m-auto mt-10 ">
+        <div className=" pl-2 pr-5">
+          <h1 className="text-5xl text-white font-bold m-1 md:m-2">
             FOR THE EVENTS
           </h1>
-          <h1 className="text-3xl text-white font-bold m-1 md:m-2">THAT</h1>
-          <h1 className="text-3xl text-white font-bold m-1 md:m-2">
+          <h1 className="text-5xl text-white font-bold m-1 md:m-2">THAT</h1>
+          <h1 className="text-5xl text-with-background font-bold m-1 md:m-2">
             CHANGE YOU
           </h1>
           <Link to="/Create" className="">
@@ -33,7 +26,7 @@ const Home = () => {
             </button>
           </Link>
         </div>
-        <div className="">
+        <div className="mr-2">
           <img
             src="https://tse2.mm.bing.net/th?id=OIP.SuYRGxWecX4tryq13gthDgHaEL&pid=Api&P=0&h=180"
             alt="event"

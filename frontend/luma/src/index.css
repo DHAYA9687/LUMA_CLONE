@@ -72,3 +72,8 @@ button:focus-visible {
 *{
   background-color: black;
 }
+.text-with-background {
+  @apply bg-gradient-to-r from-violet-800 to-red-500;
+  background-clip: text;
+  color: transparent;
+}

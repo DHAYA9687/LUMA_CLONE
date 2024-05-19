@@ -12,7 +12,7 @@ const Header = () => {
       </div>
       <div className="p-6 m-3">
         <nav>
-          <Link className="text-black text-2xl font-bold bg-gradient-to-r from-white via-red-400 to-red-800 white px-4 py-2 rounded-xl">
+          <Link className="text-black text-xl font-bold bg-gradient-to-r from-white via-red-400 to-red-800 white  py-1 px-2 rounded-md">
             {isSignIn ? (
               <button onClick={handleMenu}>SIGN IN</button>
             ) : (

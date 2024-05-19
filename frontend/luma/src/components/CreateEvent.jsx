@@ -1,13 +1,28 @@
-import React from "react";
-
+import React, { useState } from "react";
 const CreateEvent = () => {
+  const [eventName, setEventName] = useState("");
+  const [conductBy, setConductBy] = useState("");
+  const [eventDate, setEventDate] = useState("");
+  const [eventTime, setEventTime] = useState("");
+  const [venue, setVenue] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const event = {
+      eventName,
+      conductBy,
+      eventDate,
+      eventTime,
+      venue,
+    };
+    console.log(event);
+  };
   return (
     <>
-      <div className="text-white m-4 text-3xl font-bold">
-        <h1 className="px-4">CREATE EVENT</h1>
+      <div className="text-white m-8 text-3xl font-bold">
+        <h1 className="px-8 ">CREATE EVENT</h1>
       </div>
       <div className="flex items-center justify-center min-h-screen ">
-        <form className="space-y-8 border-2 bg-transparent shadow-md rounded-lg p-10 w-full max-w-md m-auto mt-8">
+        <form className="space-y-8 border-2 bg-transparent shadow-md rounded-lg p-10 w-full max-w-md m-auto mt-4">
           <div className="space-y-4">
             <div className="pb-2">
               <label
@@ -17,16 +32,17 @@ const CreateEvent = () => {
                 Event Name
               </label>
               <input
-                id="eventName"
+                id=""
                 type="text"
-                className="mt-2 block w-full rounded-md border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 "
+                onChange={(e) => setEventName(e.target.value)}
+                className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 placeholder="Event Name"
                 required
               />
             </div>
             <div className="">
               <label
-                htmlFor="eventDate"
+                htmlFor="Conduct By"
                 className="block text-2xl font-bold text-white pb-2"
               >
                 Conduct By
@@ -34,7 +50,8 @@ const CreateEvent = () => {
               <input
                 id=""
                 type="text"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                onChange={(e) => setConductBy(e.target.value)}
+                className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 placeholder="Conduct By"
                 required
               />
@@ -49,36 +66,39 @@ const CreateEvent = () => {
               <input
                 id="eventDate"
                 type="date"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                placeholder="Event Name"
+                onChange={(e) => setEventDate(e.target.value)}
+                className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                placeholder="Event Date"
                 required
               />
             </div>
             <div className="">
               <label
-                htmlFor="eventDate"
+                htmlFor="eventTime"
                 className="block text-2xl font-bold text-white pb-2"
               >
                 Event Time
               </label>
               <input
-                id="eventDate"
+                id="even"
                 type="time"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                onChange={(e) => setEventTime(e.target.value)}
+                className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 required
               />
             </div>
             <div className="">
               <label
-                htmlFor="eventDate"
+                htmlFor="eventVenue"
                 className="block text-2xl font-bold text-white pb-2"
               >
                 venue
               </label>
               <input
-                id="eventDate"
+                id=""
                 type="text"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                onChange={(e) => setVenue(e.target.value)}
+                className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 placeholder="Venue"
                 required
               />
@@ -93,6 +113,7 @@ const CreateEvent = () => {
             </button>
             <button
               type="submit"
+              onClick={handleSubmit}
               className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
             >
               Submit
