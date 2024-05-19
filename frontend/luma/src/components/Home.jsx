@@ -22,12 +22,12 @@ const Home = () => {
           <h1 className="text-3xl text-white font-bold m-1 md:m-2">
             CHANGE YOU
           </h1>
-          <Link to="" className="">
+          <Link to="/Create" className="">
             <button className="m-2 bg-blue-500 p-2 rounded-md text-black hover:bg-blue-700">
               CREATE EVENTS
             </button>
           </Link>
-          <Link to=" " className="">
+          <Link to="/Explore" className="">
             <button className="md:my-10 md:mx-5 mx-5 my-3 text-black bg-gradient-to-r from-gray-400 to-white p-2 rounded-md hover:bg-red-500">
               EXPLORE EVENTS
             </button>

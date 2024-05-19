@@ -16,7 +16,7 @@ const Header = () => {
             {isSignIn ? (
               <button onClick={handleMenu}>SIGN IN</button>
             ) : (
-              <button onClick={handleMenu}>SIGN Out</button>
+              <button onClick={handleMenu}>SIGN OUT</button>
             )}
           </Link>
         </nav>
