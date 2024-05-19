@@ -5,14 +5,14 @@ const ExploreEvent = () => {
   return (
     <div className="text-white">
       <header className="text-4xl font-bold m-3 p-4 ">
-        <div className="text-with-background">DHENT</div>
+        <div className="">DHENT</div>
       </header>
       <div className="font-bold px-28 md:px-48">
         <h1 className="text-4xl pb-4">EXPLORE EVENTS</h1>
         <h1 className="text-2xl pt-4">THIS WEEK</h1>
       </div>
       {/*grid columns */}
-      <div className="grid grid-cols-3 md:grid-cols-4  pt-10 w-4/5 mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 pt-10 w-4/5 mx-auto">
         <div className="flex p-3 gap-3">
           <div className="bg-white w-[100px] h-[100px] rounded-full"></div>
           <div className="flex flex-col justify-center items-start">
